@@ -224,7 +224,7 @@ const onShuffle = async () => {
 };
 
 const getLocation = () =>
-  new Promise<UniApp.GetLocationSuccess>((resolve, reject) => {
+  new Promise<any>((resolve, reject) => {
     uni.getLocation({
       type: 'gcj02',
       success: resolve,
@@ -377,6 +377,52 @@ onUnmounted(() => {
 .region-tip {
   display: block;
   margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #6b7280;
+}
+
+.location-btn {
+  margin-top: 16rpx;
+  height: 68rpx;
+  border-radius: 14rpx;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.city-food-card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+}
+
+.city-food-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.city-food-list {
+  margin-top: 14rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.city-food-item {
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: #ef4444;
+  background: #fff1f2;
+}
+
+.city-food-tip {
+  display: block;
+  margin-top: 12rpx;
   font-size: 22rpx;
   color: #6b7280;
 }
